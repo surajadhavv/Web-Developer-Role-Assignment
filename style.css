@@ -1,0 +1,452 @@
+@font-face {
+	font-family: 'Metropolis-Medium';
+	src: url('/fonts/Metropolis-Medium.otf');
+}
+
+@font-face {
+	font-family: 'Metropolis-Regular';
+	src: url('/fonts/Metropolis-Regular.otf') format('opentype');
+}
+
+h1 {
+	font-family: 'Metropolis';
+	color: #007F61;
+}
+
+body {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+
+/* Section 1 - Heading  */
+
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 340.73px;
+	height: 18px;
+}
+
+.headingText {
+	width: 126px;
+	height: 18px;
+	font-family: 'Metropolis-Medium';
+	color: #007F61;
+	font-size: large;
+}
+
+.line {
+	width: 94px;
+	margin: -1px 0;
+	rotate: -0;
+	border: none;
+	border-top: 1px solid #C8C8C8;
+	margin: 10px 0;
+	opacity: 0.8;
+}
+
+
+/* Section 2 - Box Styling */
+
+.customPriceArea {
+	width: 340.73px;
+	height: 74.11px;
+	border: none;
+	border-radius: 3.615px;
+	border: 0.904px solid #C8C8C8;
+	margin: 10px 0;
+	background: #FFFFFF;
+}
+
+.selected {
+	height: 161.78px;
+	background-color: #F4FBF9;
+	border: 0.904px solid #007F61;
+}
+
+.priceContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.customRadioButton {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 35px;
+	cursor: pointer;
+}
+
+.priceLabels {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	gap: 4px;
+	font-size: 14.461px;
+}
+
+.customRadioButton input[type='radio'] {
+	display: none;
+}
+
+.customRadioButton span {
+	width: 14.6px;
+	height: 14.6px;
+	border-radius: 50%;
+	border: 1px solid #DADADA;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 7px;
+}
+
+.customRadioButton span::after {
+	content: "";
+	height: 10px;
+	width: 10px;
+	background: #007F61;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	border-radius: 50%;
+	transition: 100ms ease-in-out 0s;
+}
+
+.customRadioButton input[type="radio"]:checked~span:after {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.labelOne {
+	font-weight: 400;
+}
+
+.labelTwo {
+	font-weight: 500;
+}
+
+/* Section 3 - Select Option Styling */
+
+.table_container {
+	margin-left: 2rem;
+	margin-bottom: 3em;
+	margin-top: -0.8em;
+}
+
+th {
+	text-align: left;
+	color: #000;
+	font-family: Inter;
+	font-size: 0.62138rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.customPair {
+	color: #000;
+	font-family: Inter;
+	font-size: 0.56488rem;
+	font-style: normal;
+	font-weight: 400;
+	vertical-align: bottom;
+	line-height: 6px;
+	padding-right: 3px;
+}
+
+.selectBox {
+	padding-right: 7px;
+	padding-top: 5px;
+}
+
+select {
+	color: #000;
+	font-family: Inter;
+	font-size: 0.67788rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	border-radius: 0.113rem;
+	border: 0.904px solid #d9d9d9;
+	background: #fff;
+	outline: none;
+	width: 4.12363rem;
+	height: 1.58163rem;
+	background: url("data:image/svg+xml,<svg height='7px' width='6px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+	background-position: calc(100% - 0.2rem) center !important;
+	-moz-appearance: none !important;
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	padding-right: 1rem !important;
+	padding-left: 0.5em;
+	background-color: white;
+}
+
+.select_menu {
+	width: 65.98px;
+	height: 25.31px;
+	align-items: center;
+	margin-top: -10px;
+}
+
+.select_menu.active .options {
+	display: block;
+}
+
+.select_menu .selectBtn {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #C8C8C8;
+	border-radius: 2px;
+	padding: 5px;
+	align-items: center;
+	background: #FFFF;
+}
+
+.selectBtn .sBtn-text {
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 10.85px;
+}
+
+.selectBtn i {
+	font-size: x-small;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.select_menu.active .selectBtn i {
+	transform: rotate(-180deg);
+}
+
+.select_menu .options {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	margin-top: 2px;
+	text-align: left;
+	background: #FFFF;
+	border: 1px solid #C8C8C8;
+	border-radius: 2px;
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 8px;
+}
+
+.options .option {
+	cursor: pointer;
+	padding: 0 2px;
+
+}
+
+.options .option:hover {
+	background: #C8C8C8;
+}
+
+.discountPerc {
+	font-family: 'Metropolis-Medium';
+	font-weight: 500;
+	font-size: 14.46px;
+}
+
+
+/* Section 4 - Box Discount Styling */
+
+.customDiscountContainer {
+	padding: 20px;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+
+.discountContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.discount_labels {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	gap: 4px;
+	font-size: 14.46px;
+	font-family: 'Inter';
+	width: 100%;
+}
+
+.db_1 {
+	width: 39px;
+	height: 18px;
+	font-weight: 400;
+}
+
+.db_2 {
+	width: 84px;
+	height: 18px;
+	font-weight: 500;
+}
+
+.customDiscountCenter {
+	position: relative;
+	height: 12px;
+	align-items: center;
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 9.94px;
+	color: #000;
+	opacity: 0.3;
+	margin-top: 18px;
+}
+
+.priceLine {
+	position: absolute;
+	top: -0.5px;
+	border: none;
+	width: 56.04px;
+	border: 0.9px solid #9F9F9F;
+}
+
+.customDiscountRight {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	text-align: right;
+}
+
+.upper {
+	color: #007F61;
+	font-family: 'Inter';
+	font-weight: 600;
+	font-size: 12.65px;
+}
+
+.lower {
+	font-family: 'Inter';
+	font-weight: 500;
+	font-size: 12.65px;
+}
+
+.grid-container {
+	width: 59%;
+	display: grid;
+	padding-left: 16px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 10px;
+	position: relative;
+	opacity: 0;
+}
+
+.grid-item {
+	text-align: left;
+}
+
+.grid-item_left {
+	text-align: right;
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 9.04px;
+}
+
+.grid-item_heading {
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 9.04px;
+	text-align: left;
+}
+
+/* Section 5 - Shipping and Total */
+
+.customTotalContainer {
+	width: 340.73px;
+	margin-top: -6px;
+	margin-bottom: 10px;
+}
+
+.totalContainerContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "Inter";
+	font-size: 14px !important;
+}
+
+.totalContainerContent .totalLeft {
+	font-weight: 500;
+	color: #007F61;
+	opacity: 0.6;
+}
+
+.totalContainerContent .totalRight>p {
+	font-weight: 400;
+}
+
+.totalContainerContent .totalRight {
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+}
+
+/* Section 6 - Cart Button Styling */
+
+.customCartBtn {
+	width: 341px;
+	height: 48px;
+	background: #007F61;
+	margin-top: -10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px 4px 4px 0px;
+	font-family: 'Inter';
+	font-weight: 600;
+	font-size: 16px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+/* Section 7 - Credits styling */
+
+.credits {
+	width: 341px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	gap: 5px;
+	margin-top: -5px;
+}
+
+.credits .creditsLogo {
+	font-family: 'Inter';
+	font-weight: 300;
+	font-size: 12.333px;
+	color: #827878;
+	font-style: normal;
+	line-height: normal;
+}
+
+.creditsText {
+	font-family: 'Inter';
+	font-weight: 300;
+	font-style: italic;
+	font-size: 12px;
+}
